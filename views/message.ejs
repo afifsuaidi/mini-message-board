@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <main class="container narrow">
+      <header class="page-header">
+        <h1>Message Details</h1>
+
+        <a href="/">Back to Messages</a>
+      </header>
+
+      <article class="message-detail">
+        <div class="message-header">
+          <strong><%= message.user %></strong>
+
+          <time> <%= message.added.toLocaleString() %> </time>
+        </div>
+
+        <p><%= message.text %></p>
+      </article>
+    </main>
+  </body>
+</html>

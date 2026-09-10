@@ -1,0 +1,15 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "Mini Message Board - The Odin Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}

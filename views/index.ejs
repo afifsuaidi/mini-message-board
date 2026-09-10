@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <div>
+          <h1>Mini Message Board</h1>
+          <p>A simple message board built with Express and EJS.</p>
+        </div>
+
+        <a class="button" href="/new">New Message</a>
+      </header>
+
+      <section class="messages">
+        <% messages.forEach((message, index) => { %>
+          <article class="message-card">
+            <div class="message-header">
+              <strong><%= message.user %></strong>
+
+              <time>
+                <%= message.added.toLocaleString() %>
+              </time>
+            </div>
+
+            <p><%= message.text %></p>
+
+            <a href="/message/<%= index %>">Open</a>
+          </article>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>
