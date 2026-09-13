@@ -16,6 +16,16 @@
         </div>
 
         <a class="button" href="/new">New Message</a>
+
+        <form method="GET" action="/">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search messages..."
+            value="<%= search || "" %>"
+          />
+          <button type="submit">Search</button>
+        </form>
       </header>
 
       <section class="messages">
@@ -31,7 +41,7 @@
 
             <p><%= message.text %></p>
 
-            <a href="/message/<%= index %>">Open</a>
+            <a href="/message/<%= message.id %>">Open</a>
           </article>
         <% }) %>
       </section>
